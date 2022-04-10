@@ -10,6 +10,7 @@ import com.guilherme.applogin.R
 import com.guilherme.applogin.databinding.ActivityFormCadastroBinding
 import com.guilherme.applogin.databinding.ActivityFormLoginBinding
 import com.guilherme.applogin.view.FormCadastro.FormCadastro
+import com.guilherme.applogin.view.telaPrincipal.TelaPrincipal
 
 class FormLogin : AppCompatActivity() {
 
@@ -32,9 +33,12 @@ class FormLogin : AppCompatActivity() {
             }else{
                 auth.signInWithEmailAndPassword(email,senha).addOnCompleteListener { atenticacao ->
                     if (atenticacao.isSuccessful){
-
+                        navegarTelaPrincipal()
                     }
-
+                }.addOnFailureListener{
+                    val snackbar = Snackbar.make(view,"Erro ao fazer o login do usuario!", Snackbar.LENGTH_SHORT)
+                    snackbar.setBackgroundTint(Color.RED)
+                    snackbar.show()
                 }
             }
         }
@@ -43,6 +47,22 @@ class FormLogin : AppCompatActivity() {
             val intent = Intent(this,FormCadastro::class.java)
             startActivity(intent)
         }
+    }
 
+    private fun navegarTelaPrincipal(){
+        val intent = Intent(this,TelaPrincipal::class.java)
+        startActivity(intent)
+        finish()
+    }
+
+    //Verifica o Usuario Logado no Sistema
+    override fun onStart() {
+        super.onStart()
+
+        val usuarioAtual = FirebaseAuth.getInstance().currentUser
+
+        if(usuarioAtual != null){
+            navegarTelaPrincipal()
+        }
     }
 }
