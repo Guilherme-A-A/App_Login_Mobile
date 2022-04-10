@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "978116530668",
+    "project_id": "app-login-a176b",
+    "storage_bucket": "app-login-a176b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978116530668:android:4e9cb1e60119c9582d70c9",
+        "android_client_info": {
+          "package_name": "com.guilherme.applogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978116530668-b9hahan83ljkusi2qf3dqo3rbjisofjs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDHzYEYnAqMNMntfHIBeUbWMMJeKSEP5Bw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978116530668-b9hahan83ljkusi2qf3dqo3rbjisofjs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

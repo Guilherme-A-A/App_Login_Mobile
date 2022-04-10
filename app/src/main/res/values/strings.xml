@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">App Login</string>
+    <string name="título_form_cadastro">Cadastre-se</string>
+    <string name="título_form_Login">Login do usuário</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_senha">Senha</string>
+    <string name="text_botao_cadastrar">Cadastrar</string>
+    <string name="text_botao_entrar">Entrar</string>
+    <string name="text_tela_cadastro">Não tem uma conta? Cadastre-se agora mesmo!</string>
+</resources>
